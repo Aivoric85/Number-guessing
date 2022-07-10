@@ -22,7 +22,7 @@ def guess_the_number():
             if guess < number:
                 a2 = random.choice(["Es tut mir leid, leider ist die von dir eingegebene Zahl zu niedrig.",
                                     "Schade " + name + ", leider zu niedrig.",
-                                    "Leider ist deine Zahl zu niedrig, " + name + ".",
+                                    name + " ,leider ist deine Zahl zu niedrig.",
                                     "Die von dir eingegebene Zahl ist leider zu niedrig."])
                 print(a2)
             if guess == number:
@@ -47,7 +47,8 @@ def new_round():
             print("Bitte mit ja oder nein antworten")
 
 
-name = input("Hallo, magst du mir deinen Namen verraten? ")
-print("Guten Tag " + name + ". Lass uns anfangen!")
-number = generate_number()
-guess_the_number()
+if __name__ == '__main__':
+    name = input("Hallo, magst du mir deinen Namen verraten? ")
+    print("Guten Tag " + name + ". Lass uns anfangen!")
+    number = generate_number()
+    guess_the_number()

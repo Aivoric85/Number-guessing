@@ -9,19 +9,19 @@ def guess_the_number():
         try:
             guess = int(g)
             if guess > number:
-                a1 = random.choice(["Leider ist die von dir eingegebene Zahl zu hoch.Versuche es noch einmal",
-                                    "Tut mir leid " + name + ", leider zu hoch.Versuche es noch einmal",
-                                    name + ", die Zahl ist leider zu hoch.Versuche es noch einmal",
+                a1 = random.choice(["Leider ist die von dir eingegebene Zahl zu hoch. Versuche es noch einmal",
+                                    "Tut mir leid " + name + ", leider zu hoch. Versuche es noch einmal",
+                                    name + ", die Zahl ist leider zu hoch. Versuche es noch einmal",
                                     "Leider ist die von dir eingegebene Zahl zu hoch.Versuche es noch einmal"])
                 print(a1)
             if guess < number:
                 a2 = random.choice(["Leider ist die von dir eingegebene Zahl zu niedrig.Versuche es noch einmal",
-                                    "Schade " + name + ", leider zu niedrig.Versuche es noch einmal",
-                                    name + " ,leider ist deine Zahl zu niedrig.Versuche es noch einmal",
-                                    "Die von dir eingegebene Zahl ist leider zu niedrig.Versuche es noch einmal"])
+                                    "Schade " + name + ", leider zu niedrig. Versuche es noch einmal",
+                                    name + ", leider ist deine Zahl zu niedrig. Versuche es noch einmal",
+                                    "Die von dir eingegebene Zahl ist leider zu niedrig. Versuche es noch einmal"])
                 print(a2)
             if guess == number:
-                print("Herzlichen Glückwunsch " + name + " ,du hast die richtige Zahl erraten!! " + str(number))
+                print("Herzlichen Glückwunsch " + name + ", du hast die richtige Zahl erraten!! " + str(number))
                 new_round()
                 exit()
         except ValueError:
@@ -43,7 +43,7 @@ def new_round():
 
 
 if __name__ == '__main__':
-    print("Hallo, lass uns ein Spiel spielen.Ich überlege mir eine Zahl und du musst raten welche es ist!")
+    print("Hallo, lass uns ein Spiel spielen. Ich überlege mir eine Zahl und du musst raten welche es ist!")
     name = input("Magst du mir deinen Namen verraten? ")
     print("Guten Tag " + name + ". Lass uns anfangen!")
     guess_the_number()

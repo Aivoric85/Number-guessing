@@ -2,23 +2,20 @@ import random
 
 
 # main function to generate a random number the user has to guess in german and english
-def guess_the_number(name, lang):
-    if lang == "de":
-        print("Ich überlege mir eine Zahl zwischen 0 und 100 und du musst raten welche es ist!")
-    if lang == "en":
-        print("I got a number between 0 and 100 in mind. Can you guess witch?")
-    number = random.randrange(0, 100)
+def guess_the_number(name, lang, number):
     while True:
         if lang == "de":
             try:
                 guess = int(input("Bitte gib eine Zahl zwischen 0 und 100 eingeben. \n"))
             except ValueError:
                 print("Bitte nur Zahlen von 0 bis 100 verwenden.")
+                guess_the_number(name, lang, number)
         if lang == "en":
             try:
                 guess = int(input("Please enter a number between 0 and 100. \n"))
             except ValueError:
                 print("Please only use numbers between 0 and 100.")
+                guess_the_number(name, lang, number)
         if guess > number:
             if lang == "de":
                 print(random.choice(["Leider ist die von dir eingegebene Zahl zu hoch. Versuche es noch einmal.",
@@ -44,28 +41,31 @@ def guess_the_number(name, lang):
         if guess == number:
             if lang == "de":
                 print("Herzlichen Glückwunsch " + name + ", du hast die richtige Zahl erraten!! " + str(number))
-                while True:
-                    answer = input("Möchtest du es noch einmal versuchen? Tippe ja oder nein \n")
-                    if answer in ["ja", "j", "Ja", "J"]:
-                        print("Okay " + name + ", neue Runde")
-                        guess_the_number(name, lang)
-                    if answer in ["Nein", "nein", "ne", "Ne", "N", "n"]:
-                        print("Auf Wiedersehen " + name + ", bis zum nächsten mal")
-                        exit()
-                    else:
-                        print("Bitte mit ja oder nein antworten")
+                answer = input("Möchtest du es noch einmal versuchen? Tippe ja oder nein \n")
+                if answer in ["ja", "j", "Ja", "J"]:
+                    print("Okay " + name + ", neue Runde")
+                    generate_number(name, lang)
+                if answer in ["Nein", "nein", "ne", "Ne", "N", "n"]:
+                    print("Auf Wiedersehen " + name + ", bis zum nächsten mal")
+                    exit()
+                else:
+                    print("Bitte mit ja oder nein antworten")
             if lang == "en":
                 print("Congratulations " + name + "!! You got the correct number. " + str(number))
-                while True:
-                    answer = input("Would you like to try again? Type yes or no. \n")
-                    if answer in ["yes", "y"]:
-                        print("Okay " + name + ". One more try!")
-                        guess_the_number(name, lang)
-                    if answer in ["no", "n"]:
-                        print("Good bye " + name + ". See you next time.")
-                        exit()
-                    else:
-                        print("Please use yes/y or no/n")
+                answer = input("Would you like to try again? Type yes or no. \n")
+                if answer in ["yes", "y"]:
+                    print("Okay " + name + ". One more try!")
+                    generate_number(name, lang)
+                if answer in ["no", "n"]:
+                    print("Good bye " + name + ". See you next time.")
+                    exit()
+                else:
+                    print("Please use yes/y or no/n")
+
+
+def generate_number(name, lang):
+    number = random.randrange(0, 100)
+    guess_the_number(name, lang, number)
 
 
 while True:
@@ -73,10 +73,12 @@ while True:
     if lang == "de":
         name = input("Magst du mir deinen Namen verraten? \n")
         print("Guten Tag " + name + ". Lass uns anfangen!")
-        guess_the_number(name, lang)
+        print("Ich überlege mir eine Zahl zwischen 0 und 100 und du musst raten welche es ist!")
+        generate_number(name, lang)
     if lang == "en":
         name = input("Hi, would yo tell me your name?\n")
         print("Hello " + name + ". Let's get started!")
-        guess_the_number(name, lang)
+        print("I got a number between 0 and 100 in mind. Can you guess witch?")
+        generate_number(name, lang)
     else:
         print("Ops, " + str(lang) + " is no valid option.")

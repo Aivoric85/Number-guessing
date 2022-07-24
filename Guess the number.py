@@ -52,7 +52,7 @@ def generate_number(name):
 
 
 def set_language():
-    print("Hello, let us choose an Language: \nFor englisch typ: en \nFür deutsch tippe: de ")
+    print("Hello, let us choose a Language: \nFor englisch typ: en \nFür deutsch tippe: de ")
     lang = input()
     if lang == "en":
         t = gettext.translation('Guess_en', localedir='Lang', languages=['en'])

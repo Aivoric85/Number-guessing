@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2022-07-24 16:21+0200\n"
-"PO-Revision-Date: 2022-07-24 16:25+0200\n"
+"PO-Revision-Date: 2022-07-24 16:56+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -16,11 +16,11 @@ msgstr ""
 
 #: Guess the number.py:9
 msgid "Please enter a number between 0 and 100."
-msgstr "Bitte nur Zahlen zwischen 0 und 100 verwenden."
+msgstr "Bitte verwende nur Zahlen zwischen 0 und 100."
 
 #: Guess the number.py:13
 msgid "Please only use numbers between 0 and 100."
-msgstr "Bitte verwende nur Zahlen zwischen 0 und 100."
+msgstr "Bitte nur Zahlen zwischen 0 und 100 verwenden."
 
 #: Guess the number.py:20
 msgid "Sorry, the number you have entered is to high. Please try again."

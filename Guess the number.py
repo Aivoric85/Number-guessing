@@ -4,14 +4,13 @@ import gettext
 
 # main function guess a random number
 def guess_the_number(name, number):
+    print(_("Please enter a number between 0 and 100."))
     while True:
         try:
-            print(_("Please enter a number between 0 and 100."))
             guess = int(input())
             check_number(name, guess, number)
         except ValueError:
             print(_("Please only use numbers between 0 and 100."))
-            guess_the_number(name, number)
 
 
 # Compare's generatted number and user input

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-07-24 15:02+0200\n"
-"PO-Revision-Date: 2022-07-24 15:02+0200\n"
+"POT-Creation-Date: 2022-07-24 16:21+0200\n"
+"PO-Revision-Date: 2022-07-24 16:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -14,51 +14,51 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: Guess the number.py\n"
 
-#: Guess the number.py:11
+#: Guess the number.py:9
 msgid "Please enter a number between 0 and 100."
 msgstr "Bitte nur Zahlen zwischen 0 und 100 verwenden."
 
-#: Guess the number.py:15
+#: Guess the number.py:13
 msgid "Please only use numbers between 0 and 100."
 msgstr "Bitte verwende nur Zahlen zwischen 0 und 100."
 
-#: Guess the number.py:21
+#: Guess the number.py:20
 msgid "Sorry, the number you have entered is to high. Please try again."
 msgstr "Sorry, die eingegebene Zahl ist zu hoch. Versuche es noch mal."
 
-#: Guess the number.py:22
+#: Guess the number.py:21
 #, python-format
 msgid "Sorry %s, to high. Please try again."
 msgstr "Schade %s, zu hoch. Versuch es noch mal."
 
-#: Guess the number.py:23
+#: Guess the number.py:22
 #, python-format
 msgid "%s, the number you picked is to high. Please try again."
 msgstr "%s, deine gewählte Zahl ist zu hoch. Probiere es noch mal."
 
-#: Guess the number.py:24
+#: Guess the number.py:23
 msgid "The number you have chosen is to high. Please try again."
 msgstr "Die von dir gewählte Zahl ist zu hoch. Bitte versuche es erneut."
 
-#: Guess the number.py:27
+#: Guess the number.py:26
 msgid "Sorry, the number you have entered is to low. Please try again."
 msgstr "Sorry, die eingegebene Zahl ist zu kein. Bitte versuche es noch mal."
 
-#: Guess the number.py:28
+#: Guess the number.py:27
 #, python-format
 msgid "Sorry %s, to low. Please try again."
 msgstr "Schade %s, zu hoch. Versuch es noch mal."
 
-#: Guess the number.py:29
+#: Guess the number.py:28
 #, python-format
 msgid "%s, the number you picked is to low. Please try again."
 msgstr "%s, deine gewählte Zahl ist zu niedrig. Probiere es noch mal."
 
-#: Guess the number.py:30
+#: Guess the number.py:29
 msgid "The number you entered is to low... Sorry. Please try again."
 msgstr "Deine eingegebene Zahl ist zu niedrig... Sorry. Versuche es erneut."
 
-#: Guess the number.py:33
+#: Guess the number.py:32
 #, python-format
 msgid "Congratulations %s!! You got the correct number. %s"
 msgstr "Glückwunsch %s!! Du hast die richtige Zahl erraten. %s"
@@ -97,16 +97,16 @@ msgstr "Auf Wiedersehen %s. Bis zum nächsten Mal."
 msgid "Please use yes/y or no/n"
 msgstr "Bitte verwenden Sie ja/j oder nein/n"
 
-#: Guess the number.py:55
-msgid "Hi, would yo tell me your name?\n"
+#: Guess the number.py:70
+msgid "Hi, would you tell me your name?\n"
 msgstr "Hallo, nenne mir bitte deinen Namen?\n"
 
-#: Guess the number.py:56
+#: Guess the number.py:71
 #, python-format
 msgid "Hello %s. Let's get started!"
 msgstr "Hallo %s. Fangen wir an!"
 
-#: Guess the number.py:57
+#: Guess the number.py:72
 msgid "I got a number between 0 and 100 in mind. Can you guess wich?"
 msgstr "Ich habe eine Zahl zwischen 0 und 100 im Kopf. Kannst du erraten, welche?"
 

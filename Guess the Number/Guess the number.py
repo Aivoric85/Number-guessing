@@ -29,7 +29,8 @@ def check_number(name, guess, number, attempt):
         guess_the_number(name, number, attempt)
     if guess == number:
         print(_("Congratulations %s!! You got the correct number %s. You have tryed %s times.") % (name, number, attempt))
-        save_score(name, attempt)
+        user = {'Name' : name, 'Attempts' : attempt}
+        json.dump(user , open('Guess the Number\GtN_score.json', 'w'), indent= 4, separators= (',' ,': '))
         retry(name)
                 
 
@@ -65,11 +66,7 @@ def set_language():
             return _ 
         else:
             print("Sorry %s, is no valid option." % (lang))
-
-
-def save_score(name, attempt):
-    user = {'Name' : name, 'Attempts' : attempt}
-    json.dump(user , open('Guess the Number\GtN_score.json', 'w'), indent= 4, separators= (',' ,': '))
+    
 
 
 attempt = 0

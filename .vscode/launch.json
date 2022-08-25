@@ -5,12 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Aktuelle Datei",
+            "name": "Debug Tests",
             "type": "python",
             "request": "launch",
+            "purpose": ["debug-test"],
             "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": true
-        }
+            "justMyCode": false
+        },
     ]
 }

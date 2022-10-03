@@ -1,5 +1,4 @@
-import random, gettext, json
-
+import random, gettext, sqlite3
 
 # main function guess a random number
 def guess_the_number(name, number, attempt):
@@ -29,8 +28,6 @@ def check_number(name, guess, number, attempt):
         guess_the_number(name, number, attempt)
     if guess == number:
         print(_("Congratulations %s!! You got the correct number %s. You have tryed %s times.") % (name, number, attempt))
-        user = {'User':{'Name' : name, 'Attempts' : attempt}}
-        json.dump(user ,open('Data\GtN_score.json', 'w'), indent= 4, separators= (',' ,': '))
         retry(name)
                 
 
@@ -69,6 +66,7 @@ def set_language():
     
 
 
+
 attempt = 0
 name = 'Player'
 _ = set_language()
@@ -76,3 +74,4 @@ name = input(_("Hi, would you tell me your name?\n"))
 print(_("Hello %s. Let's get started!") % (name))
 print(_("I got a number between 0 and 100 in mind. Can you guess wich?"))
 generate_number(name)
+
